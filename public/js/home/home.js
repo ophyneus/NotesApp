@@ -47,7 +47,7 @@
 
             var newTopic = new Topic(topic);
 
-            newTopic.$save()
+            newTopic.$save(topic)
                 .then(
                     function(data){
                         console.log(data);
@@ -92,6 +92,10 @@
               );
 
         };
+
+        //ADD unarchiving
+        //db.topics.update({_id:ObjectId("570d17b0851920d708a1406c")},{$unset: {deleted:1}}, {multi: false})
+        //Replacing delete conditions in topics.js seemed to work....
 
         $scope.navigateTo = function(id){
 

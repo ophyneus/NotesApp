@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var TopicSchema = new Schema({
     name: { type: String, required: true },
+    description: { type: String },
     created: { type: Date, default: Date.now },
     viewCount: {type: Number, default: 0},
     deleted: { type: Date },

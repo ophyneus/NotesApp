@@ -25,7 +25,8 @@ router.post('/', function(req, res, next) {
     if(postData.name){
 
         var topicObject = {
-            name: postData.name
+            name: postData.name,
+            description: postData.description
         };
 
         var newTopic = new Topic(topicObject);
